@@ -1,7 +1,7 @@
 services:
   dashboard:
     container_name: dashboard
-    image: hummingbot/dashboard:latest
+    image: ducskt/hummingbot-dashboard:latest
     ports:
       - "8501:8501"
     environment:
@@ -17,7 +17,7 @@ services:
         - emqx-bridge
   backend-api:
     container_name: backend-api
-    image: hummingbot/backend-api:latest
+    image: ducskt/hummingbot-backend:latest
     ports:
       - "8000:8000"
     volumes:
@@ -72,3 +72,4 @@ volumes:
   emqx-data: { }
   emqx-log: { }
   emqx-etc: { }
+
